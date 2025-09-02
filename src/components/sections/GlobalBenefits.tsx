@@ -3,6 +3,13 @@ import { BookOpen, Briefcase, Users, Link as LinkIcon, MonitorPlay, Podcast, New
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
+
 
 const learningBenefits = [
   {
@@ -58,6 +65,42 @@ const careerBenefits = [
     }
 ]
 
+const allBenefits = [
+    {
+        value: "learning",
+        title: "Learning & Resources",
+        benefits: learningBenefits,
+    },
+    {
+        value: "community",
+        title: "Events & Community",
+        benefits: communityBenefits,
+    },
+    {
+        value: "career",
+        title: "Career & Growth",
+        benefits: careerBenefits,
+    }
+];
+
+function BenefitsGrid({ benefits }: { benefits: typeof learningBenefits }) {
+    return (
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+            {benefits.map((benefit, index) => (
+            <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 h-full">
+                <CardHeader className="items-center p-6">
+                <div className="bg-primary/10 p-4 rounded-full mb-4">
+                    <benefit.icon className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="font-headline text-xl">{benefit.title}</CardTitle>
+                <CardDescription className="pt-2">{benefit.description}</CardDescription>
+                </CardHeader>
+            </Card>
+            ))}
+        </div>
+    )
+}
+
 export function GlobalBenefits() {
   return (
     <section id="benefits" className="py-16 md:py-24">
@@ -67,59 +110,40 @@ export function GlobalBenefits() {
           <p className="text-muted-foreground mt-4 text-lg">Being part of ACM gives you access to a world of resources.</p>
         </div>
 
-        <Tabs defaultValue="learning" className="w-full max-w-4xl mx-auto">
-          <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 mb-8">
-            <TabsTrigger value="learning">Learning & Resources</TabsTrigger>
-            <TabsTrigger value="community">Events & Community</TabsTrigger>
-            <TabsTrigger value="career">Career & Growth</TabsTrigger>
-          </TabsList>
-          <TabsContent value="learning">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {learningBenefits.map((benefit, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader className="items-center p-6">
-                    <div className="bg-primary/10 p-4 rounded-full mb-4">
-                      <benefit.icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="font-headline text-xl">{benefit.title}</CardTitle>
-                    <CardDescription className="pt-2">{benefit.description}</CardDescription>
-                  </CardHeader>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="community">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {communityBenefits.map((benefit, index) => (
-                <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-                  <CardHeader className="items-center p-6">
-                    <div className="bg-primary/10 p-4 rounded-full mb-4">
-                      <benefit.icon className="h-8 w-8 text-primary" />
-                    </div>
-                    <CardTitle className="font-headline text-xl">{benefit.title}</CardTitle>
-                    <CardDescription className="pt-2">{benefit.description}</CardDescription>
-                  </CardHeader>
-                </Card>
-              ))}
-            </div>
-          </TabsContent>
-          <TabsContent value="career">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                {careerBenefits.map((benefit, index) => (
-                    <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-                    <CardHeader className="items-center p-6">
-                        <div className="bg-primary/10 p-4 rounded-full mb-4">
-                        <benefit.icon className="h-8 w-8 text-primary" />
-                        </div>
-                        <CardTitle className="font-headline text-xl">{benefit.title}</CardTitle>
-                        <CardDescription className="pt-2">{benefit.description}</CardDescription>
-                    </CardHeader>
-                    </Card>
+        {/* Accordion for Mobile */}
+        <div className="md:hidden max-w-4xl mx-auto">
+            <Accordion type="single" collapsible defaultValue="learning" className="w-full">
+                {allBenefits.map(({ value, title, benefits }) => (
+                    <AccordionItem value={value} key={value}>
+                        <AccordionTrigger className="text-lg font-semibold text-primary">{title}</AccordionTrigger>
+                        <AccordionContent>
+                            <BenefitsGrid benefits={benefits} />
+                        </AccordionContent>
+                    </AccordionItem>
                 ))}
-            </div>
-          </TabsContent>
-        </Tabs>
-
+            </Accordion>
+        </div>
+        
+        {/* Tabs for Desktop */}
+        <div className="hidden md:block">
+            <Tabs defaultValue="learning" className="w-full max-w-4xl mx-auto">
+            <TabsList className="grid w-full grid-cols-3 mb-8">
+                <TabsTrigger value="learning">Learning & Resources</TabsTrigger>
+                <TabsTrigger value="community">Events & Community</TabsTrigger>
+                <TabsTrigger value="career">Career & Growth</TabsTrigger>
+            </TabsList>
+            <TabsContent value="learning">
+                <BenefitsGrid benefits={learningBenefits} />
+            </TabsContent>
+            <TabsContent value="community">
+                <BenefitsGrid benefits={communityBenefits} />
+            </TabsContent>
+            <TabsContent value="career">
+                <BenefitsGrid benefits={careerBenefits} />
+            </TabsContent>
+            </Tabs>
+        </div>
+        
         <div className="text-center mt-12">
           <Button asChild className="bg-accent hover:bg-accent/90">
             <Link href="https://www.acm.org/membership/membership-benefits" target="_blank" rel="noopener noreferrer">

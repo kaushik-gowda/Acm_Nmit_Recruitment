@@ -1,25 +1,62 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { BookOpen, Briefcase, Users, Link as LinkIcon } from "lucide-react";
+import { BookOpen, Briefcase, Users, Link as LinkIcon, MonitorPlay, Podcast, Newspaper, GraduationCap } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 
-const globalBenefits = [
+const learningBenefits = [
   {
     icon: BookOpen,
     title: "ACM Digital Library",
-    description: "Get access to the world's largest collection of computing literature, including journals, conference proceedings, and books."
+    description: "Access the world's largest collection of computing literature."
   },
   {
-    icon: Briefcase,
-    title: "Career Resources",
-    description: "Utilize the ACM Career & Job Center, career-related webinars, and resources to advance your professional journey."
+    icon: MonitorPlay,
+    title: "Training Courses",
+    description: "Access to Pluralsight and Skillsoft Percipio platforms for technical courses."
   },
   {
-    icon: Users,
-    title: "Global Community",
-    description: "Network with a global community of over 100,000 students and professionals in the computing field."
+    icon: Newspaper,
+    title: "ACM Publications",
+    description: "Stay updated with Communications of the ACM and ACM Queue."
   }
 ];
+
+const communityBenefits = [
+    {
+        icon: Users,
+        title: "ACM TechTalks",
+        description: "Attend webinars by leading experts on trending computing topics."
+    },
+    {
+        icon: Newspaper,
+        title: "XRDS: Crossroads",
+        description: "Read the flagship student magazine for computing students."
+    },
+    {
+        icon: Podcast,
+        title: "ACM ByteCast",
+        description: "Listen to inspiring stories from computing professionals."
+    }
+]
+
+const careerBenefits = [
+    {
+        icon: GraduationCap,
+        title: "Certification Prep",
+        description: "Prepare for professional certifications with targeted resources."
+    },
+    {
+        icon: Briefcase,
+        title: "Coding Labs",
+        description: "Practice your skills in hands-on coding labs and sandboxes."
+    },
+    {
+        icon: Users,
+        title: "ACM-W",
+        description: "Join the community supporting, celebrating, and advocating for women in computing."
+    }
+]
 
 export function GlobalBenefits() {
   return (
@@ -29,24 +66,65 @@ export function GlobalBenefits() {
           <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">ACM Global Membership Benefits</h2>
           <p className="text-muted-foreground mt-4 text-lg">Being part of ACM gives you access to a world of resources.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-          {globalBenefits.map((benefit, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-              <CardHeader className="items-center p-6">
-                <div className="bg-primary/10 p-4 rounded-full mb-4">
-                  <benefit.icon className="h-8 w-8 text-primary" />
-                </div>
-                <CardTitle className="font-headline text-xl">{benefit.title}</CardTitle>
-                <CardDescription className="pt-2">{benefit.description}</CardDescription>
-              </CardHeader>
-            </Card>
-          ))}
-        </div>
-        <div className="text-center">
+
+        <Tabs defaultValue="learning" className="w-full max-w-4xl mx-auto">
+          <TabsList className="grid w-full grid-cols-1 md:grid-cols-3 mb-8">
+            <TabsTrigger value="learning">Learning & Resources</TabsTrigger>
+            <TabsTrigger value="community">Events & Community</TabsTrigger>
+            <TabsTrigger value="career">Career & Growth</TabsTrigger>
+          </TabsList>
+          <TabsContent value="learning">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {learningBenefits.map((benefit, index) => (
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+                  <CardHeader className="items-center p-6">
+                    <div className="bg-primary/10 p-4 rounded-full mb-4">
+                      <benefit.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline text-xl">{benefit.title}</CardTitle>
+                    <CardDescription className="pt-2">{benefit.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+          <TabsContent value="community">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {communityBenefits.map((benefit, index) => (
+                <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+                  <CardHeader className="items-center p-6">
+                    <div className="bg-primary/10 p-4 rounded-full mb-4">
+                      <benefit.icon className="h-8 w-8 text-primary" />
+                    </div>
+                    <CardTitle className="font-headline text-xl">{benefit.title}</CardTitle>
+                    <CardDescription className="pt-2">{benefit.description}</CardDescription>
+                  </CardHeader>
+                </Card>
+              ))}
+            </div>
+          </TabsContent>
+          <TabsContent value="career">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                {careerBenefits.map((benefit, index) => (
+                    <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+                    <CardHeader className="items-center p-6">
+                        <div className="bg-primary/10 p-4 rounded-full mb-4">
+                        <benefit.icon className="h-8 w-8 text-primary" />
+                        </div>
+                        <CardTitle className="font-headline text-xl">{benefit.title}</CardTitle>
+                        <CardDescription className="pt-2">{benefit.description}</CardDescription>
+                    </CardHeader>
+                    </Card>
+                ))}
+            </div>
+          </TabsContent>
+        </Tabs>
+
+        <div className="text-center mt-12">
           <Button asChild className="bg-accent hover:bg-accent/90">
-            <Link href="https://www.acm.org/membership/benefits" target="_blank" rel="noopener noreferrer">
+            <Link href="https://www.acm.org/membership/membership-benefits" target="_blank" rel="noopener noreferrer">
               <LinkIcon className="mr-2 h-4 w-4" />
-              Learn More on ACM.org
+              Explore Full Benefits →
             </Link>
           </Button>
         </div>

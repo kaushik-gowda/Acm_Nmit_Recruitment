@@ -1,26 +1,29 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Calendar, ClipboardList, UserPlus } from "lucide-react";
+import { Calendar, ClipboardList, UserPlus, QrCode } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Image from "next/image";
 
 const recruitmentSteps = [
   {
-    icon: Calendar,
-    title: "Application Deadline",
-    description: "Submit your application before the final date to be considered for the current recruitment cycle. Don't miss out!",
-    details: "Ends: October 31, 2024"
+    icon: UserPlus,
+    title: "Who Can Join?",
+    description: "Passionate students from 1st and 2nd year of any branch with a keen interest in computing and technology.",
+    details: "Open to 1st & 2nd years."
   },
   {
     icon: ClipboardList,
-    title: "Requirements",
-    description: "We are looking for passionate students from any branch with a keen interest in computing and technology.",
-    details: "Open to all years and branches."
+    title: "Selection Process",
+    description: "The process is simple. Fill out the form, tell us about your interests, and you might be invited for a short screening.",
+    details: "Form submission + optional screening."
   },
   {
-    icon: UserPlus,
-    title: "Sign-Up Process",
-    description: "The process is simple. Fill out the form, tell us about your interests, and you're on your way to becoming a member.",
-    details: "Click 'Join Now' to start."
+    icon: Calendar,
+    title: "Dates & Venue",
+    description: "Submit your application before the deadline to be part of the drive. The main event will be held on campus.",
+    details: "Deadline: October 31, 2024"
   }
-]
+];
 
 export function RecruitmentDetails() {
   return (
@@ -30,7 +33,7 @@ export function RecruitmentDetails() {
           <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">Recruitment Drive Details</h2>
           <p className="text-muted-foreground mt-4 text-lg">Here's what you need to know to join us.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
           {recruitmentSteps.map((step, index) => (
             <Card key={index} className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300 p-6">
               <CardHeader className="p-0">
@@ -46,6 +49,28 @@ export function RecruitmentDetails() {
             </Card>
           ))}
         </div>
+        <Card className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 p-8 shadow-lg">
+          <div className="flex-1 text-center md:text-left">
+            <h3 className="text-2xl font-bold font-headline text-primary mb-2">How to Apply</h3>
+            <p className="text-muted-foreground mb-4">
+              Click the button to fill out the registration form or scan the QR code with your phone.
+            </p>
+            <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
+              <Link href="#">Register for Recruitment</Link>
+            </Button>
+          </div>
+          <div className="flex-shrink-0">
+            <div className="bg-white p-4 rounded-lg shadow-md">
+              <Image 
+                src="https://placehold.co/200x200/png?text=QR+Code" 
+                alt="Registration QR Code"
+                data-ai-hint="qr code" 
+                width={200}
+                height={200}
+              />
+            </div>
+          </div>
+        </Card>
       </div>
     </section>
   );

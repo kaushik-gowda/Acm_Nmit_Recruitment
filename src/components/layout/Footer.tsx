@@ -1,5 +1,6 @@
-import { GraduationCap, TwitterIcon, InstagramIcon, LinkedinIcon, Mail, Phone, MapPin } from "lucide-react";
+import { TwitterIcon, InstagramIcon, LinkedinIcon, Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
+import { AcmNmitLogo } from "../AcmNmitLogo";
 
 const socialLinks = [
   { name: "Twitter", icon: TwitterIcon, href: "#" },
@@ -14,7 +15,7 @@ export function Footer() {
         
         <div className="flex flex-col items-start gap-4">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
-            <GraduationCap className="h-6 w-6 text-primary" />
+            <AcmNmitLogo className="h-8 w-auto" />
             <span className="text-lg font-bold text-primary font-headline">ACM NMIT Onboard</span>
           </Link>
           <p className="text-sm text-muted-foreground">

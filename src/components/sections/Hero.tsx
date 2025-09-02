@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { GraduationCap } from "lucide-react";
+import { AcmNmitLogo } from "../AcmNmitLogo";
 
 export function Hero() {
   return (
@@ -17,7 +17,7 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="max-w-3xl mx-auto space-y-8 bg-background/80 backdrop-blur-sm p-8 rounded-xl">
           <div className="flex items-center justify-center gap-4 text-primary">
-             <GraduationCap className="h-12 w-12" />
+             <AcmNmitLogo className="h-16 w-auto" />
              <h1 className="text-3xl md:text-5xl font-bold font-headline tracking-tighter">
                 Innovate. Collaborate. Lead.
              </h1>

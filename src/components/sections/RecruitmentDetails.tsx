@@ -1,5 +1,5 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Calendar, ClipboardList, UserPlus, QrCode } from "lucide-react";
+import { Calendar, UserPlus, QrCode } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Image from "next/image";
@@ -10,12 +10,6 @@ const recruitmentSteps = [
     title: "Who Can Join?",
     description: "Passionate students from 1st and 2nd year of any branch with a keen interest in computing and technology.",
     details: "Open to 1st & 2nd years."
-  },
-  {
-    icon: ClipboardList,
-    title: "Selection Process",
-    description: "The process is simple. Fill out the form, tell us about your interests, and you might be invited for a short screening.",
-    details: "Form submission + optional screening."
   },
   {
     icon: Calendar,
@@ -33,7 +27,7 @@ export function RecruitmentDetails() {
           <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">Recruitment Drive Details</h2>
           <p className="text-muted-foreground mt-4 text-lg">Here's what you need to know to join us.</p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
           {recruitmentSteps.map((step, index) => (
             <Card key={index} className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300 p-6">
               <CardHeader className="p-0">

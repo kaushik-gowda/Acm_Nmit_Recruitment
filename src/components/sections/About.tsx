@@ -5,7 +5,7 @@ export function About() {
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold font-headline mb-6 text-primary">About ACM NMIT</h2>
           <p className="text-muted-foreground text-lg leading-relaxed">
-            The ACM NMIT Student Chapter is a hub for students passionate about computing. We are dedicated to fostering a culture of innovation, learning, and collaboration. Our chapter provides a platform for students to explore the latest trends in technology, connect with industry professionals, and develop their skills beyond the classroom. We organize a variety of events, including workshops, hackathons, expert talks, and coding competitions, to help our members stay at the forefront of the ever-evolving world of computer science.
+            As the official student chapter of the Association for Computing Machinery (ACM) at Nitte Meenakshi Institute of Technology, we are part of a global network of computing professionals and students. Our mission is to foster a vibrant community of innovators and problem-solvers. We provide a platform for students to develop their technical and professional skills by organizing a wide range of events, including hands-on workshops, competitive hackathons, insightful guest lectures from industry experts, and valuable networking opportunities with alumni.
           </p>
         </div>
       </div>

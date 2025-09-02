@@ -4,16 +4,16 @@ import { useState } from "react";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Textarea } from "@/components/ui/textarea";
 import { Button } from "@/components/ui/button";
-import { Loader2, Wand2 } from "lucide-react";
+import { Loader2, Wand2, Code, Trophy, Users, Lightbulb, Briefcase } from "lucide-react";
 import { generateLocalBenefits, type GenerateLocalBenefitsOutput } from "@/ai/flows/generate-local-benefits";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
-import { Badge } from "@/components/ui/badge";
 
 const predefinedBenefits = [
-  { title: "Exclusive Workshops", description: "Hands-on sessions on emerging technologies." },
-  { title: "Networking Events", description: "Connect with peers, seniors, and industry experts." },
-  { title: "Hackathons & Contests", description: "Showcase your skills and win exciting prizes." },
-  { title: "Mentorship Programs", description: "Get guidance from experienced mentors." },
+  { icon: Code, title: "Hands-on Coding Sessions", description: "Sharpen your skills with practical workshops." },
+  { icon: Trophy, title: "Hackathons & Contests", description: "Compete and build innovative projects." },
+  { icon: Users, title: "Guest Lectures & Tech Talks", description: "Learn from industry and academic experts." },
+  { icon: Briefcase, title: "Networking Opportunities", description: "Connect with seniors, alumni, and professionals." },
+  { icon: Lightbulb, title: "Leadership & Projects", description: "Lead initiatives and gain real-world experience." },
 ];
 
 export function LocalBenefits() {
@@ -50,15 +50,15 @@ export function LocalBenefits() {
           <p className="text-muted-foreground mt-4 text-lg">Discover the exclusive benefits our local chapter offers.</p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mb-16">
           {predefinedBenefits.map((benefit, index) => (
-             <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
-              <CardHeader>
-                <CardTitle className="font-headline text-xl">{benefit.title}</CardTitle>
+             <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+              <CardHeader className="items-center p-6">
+                <div className="bg-primary/10 p-4 rounded-full mb-4">
+                  <benefit.icon className="h-8 w-8 text-primary" />
+                </div>
+                <CardTitle className="font-headline text-lg">{benefit.title}</CardTitle>
               </CardHeader>
-              <CardContent>
-                <p className="text-muted-foreground">{benefit.description}</p>
-              </CardContent>
             </Card>
           ))}
         </div>

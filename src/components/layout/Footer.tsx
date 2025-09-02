@@ -1,11 +1,11 @@
-import { TwitterIcon, InstagramIcon, LinkedinIcon, Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
 
 const socialLinks = [
-  { name: "Twitter", icon: TwitterIcon, href: "#" },
-  { name: "Instagram", icon: InstagramIcon, href: "#" },
-  { name: "LinkedIn", icon: LinkedinIcon, href: "#" },
+  { name: "Twitter", href: "#" },
+  { name: "Instagram", href: "#" },
+  { name: "LinkedIn", href: "#" },
 ]
 
 export function Footer() {
@@ -23,8 +23,8 @@ export function Footer() {
           </p>
           <div className="flex gap-4">
             {socialLinks.map(social => (
-              <Link key={social.name} href={social.href} prefetch={false} aria-label={social.name} className="text-muted-foreground hover:text-primary transition-colors">
-                <social.icon className="h-6 w-6" />
+              <Link key={social.name} href={social.href} prefetch={false} aria-label={social.name} className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors">
+                {social.name}
               </Link>
             ))}
           </div>

@@ -17,8 +17,8 @@ export function Header() {
           <Link href="#benefits" className="text-muted-foreground transition-colors hover:text-foreground" prefetch={false}>
             Benefits
           </Link>
-          <Link href="#events" className="text-muted-foreground transition-colors hover:text-foreground" prefetch={false}>
-            Events
+          <Link href="#recruitment" className="text-muted-foreground transition-colors hover:text-foreground" prefetch={false}>
+            Recruitment
           </Link>
           <Link href="#contact" className="text-muted-foreground transition-colors hover:text-foreground" prefetch={false}>
             Contact

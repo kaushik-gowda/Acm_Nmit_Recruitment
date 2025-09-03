@@ -14,8 +14,8 @@ const recruitmentSteps = [
   {
     icon: Calendar,
     title: "Dates & Venue",
-    description: "Submit your application before the deadline to be part of the drive. The main event will be held on campus.",
-    details: "Deadline: October 31, 2024"
+    description: "Deadline: October 31, 2024",
+    details: ""
   }
 ];
 
@@ -35,11 +35,13 @@ export function RecruitmentDetails() {
                   <step.icon className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="font-headline text-xl">{step.title}</CardTitle>
-                <CardDescription className="pt-2">{step.description}</CardDescription>
+                <CardDescription className="pt-2 text-primary font-semibold">{step.description}</CardDescription>
               </CardHeader>
-              <CardContent className="mt-auto p-0 pt-4">
-                <p className="font-semibold text-primary">{step.details}</p>
-              </CardContent>
+              {step.details && (
+                <CardContent className="mt-auto p-0 pt-4">
+                  <p className="font-semibold text-primary">{step.details}</p>
+                </CardContent>
+              )}
             </Card>
           ))}
         </div>

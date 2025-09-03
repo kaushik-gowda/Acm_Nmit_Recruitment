@@ -14,7 +14,6 @@ const recruitmentSteps = [
   {
     icon: Calendar,
     title: "Dates & Venue",
-    description: "",
     details: ["Venue: On Campus", "Deadline: October 31, 2024"]
   }
 ];
@@ -43,9 +42,11 @@ export function RecruitmentDetails() {
               </CardHeader>
               {step.details && (
                 <CardContent className="mt-auto p-0 pt-4">
-                  {step.details.map((detail, i) => (
-                    <p key={i} className="font-semibold text-primary">{detail}</p>
-                  ))}
+                  <div className="space-y-1">
+                    {step.details.map((detail, i) => (
+                      <p key={i} className="font-semibold text-primary">{detail}</p>
+                    ))}
+                  </div>
                 </CardContent>
               )}
             </Card>

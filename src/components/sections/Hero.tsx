@@ -16,15 +16,15 @@ export function Hero() {
       <div className="container mx-auto px-4 md:px-6 text-center">
         <div className="max-w-4xl mx-auto space-y-8 bg-background/80 backdrop-blur-sm p-8 rounded-xl">
           <div className="flex items-center justify-center gap-4 text-primary">
-             <Image src="/acm_logo.jpg" alt="ACM NMIT Logo" width={64} height={64} className="h-16 w-auto" />
+             <Image src="/acm_logo.jpg" alt="NMIT ACM Logo" width={64} height={64} className="h-16 w-auto" />
              <div className="text-center">
                 <h1 className="text-3xl md:text-5xl font-bold font-headline tracking-tighter">
-                    ACM NMIT Student Chapter
+                    NMIT ACM Student Chapter
                 </h1>
              </div>
           </div>
           <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto">
-            Join the ACM NMIT Student Chapter and be part of a global community of innovators, coders, and creators.
+            Join the NMIT ACM Student Chapter and be part of a global community of innovators, coders, and creators.
             <br />
             <span className="font-semibold text-foreground">Hosted under the Department of Artificial Intelligence &amp; Data Science, NMIT.</span>
           </p>

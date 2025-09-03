@@ -6,7 +6,7 @@ export function JoinNow() {
   return (
     <section id="join-now" className="py-20 md:py-32 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">Kickstart your journey with ACM NMIT today!</h2>
+        <h2 className="text-3xl md:text-4xl font-bold font-headline mb-4">Kickstart your journey with NMIT ACM today!</h2>
         <p className="text-lg md:text-xl text-primary-foreground/90 max-w-2xl mx-auto mb-8">
           Become a part of our dynamic community and take the first step towards an exciting journey in computing.
         </p>

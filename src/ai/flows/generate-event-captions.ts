@@ -33,7 +33,7 @@ const prompt = ai.definePrompt({
   name: 'generateEventCaptionPrompt',
   input: {schema: GenerateEventCaptionInputSchema},
   output: {schema: GenerateEventCaptionOutputSchema},
-  prompt: `You are a social media manager for ACM NMIT. Generate an engaging caption for the following event photo and description.
+  prompt: `You are a social media manager for NMIT ACM. Generate an engaging caption for the following event photo and description.
 
 Description: {{{description}}}
 Photo: {{media url=photoDataUri}}`,

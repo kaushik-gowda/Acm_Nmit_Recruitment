@@ -7,8 +7,8 @@ export function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center justify-between">
         <Link href="#" className="flex items-center gap-2" prefetch={false}>
-          <Image src="/acm_logo.jpg" alt="ACM NMIT Logo" width={32} height={32} className="h-8 w-auto" />
-          <span className="text-md font-bold text-primary font-headline">ACM NMIT Student Chapter – Dept. of AI &amp; DS</span>
+          <Image src="/acm_logo.jpg" alt="NMIT ACM Logo" width={32} height={32} className="h-8 w-auto" />
+          <span className="text-md font-bold text-primary font-headline">NMIT ACM Student Chapter – Dept. of AI &amp; DS</span>
         </Link>
         <nav className="hidden items-center gap-4 text-sm font-medium md:flex lg:gap-6">
           <Link href="#about" className="text-muted-foreground transition-colors hover:text-foreground" prefetch={false}>

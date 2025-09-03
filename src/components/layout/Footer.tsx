@@ -14,8 +14,8 @@ export function Footer() {
         
         <div className="flex flex-col items-start gap-4">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
-            <Image src="/acm_logo.jpg" alt="ACM NMIT Logo" width={32} height={32} className="h-8 w-auto" />
-            <span className="text-lg font-bold text-primary font-headline">ACM NMIT Student Chapter</span>
+            <Image src="/acm_logo.jpg" alt="NMIT ACM Logo" width={32} height={32} className="h-8 w-auto" />
+            <span className="text-lg font-bold text-primary font-headline">NMIT ACM Student Chapter</span>
           </Link>
           <p className="text-sm text-muted-foreground">
              The official student chapter of the Association for Computing Machinery at Nitte Meenakshi Institute of Technology.
@@ -69,7 +69,7 @@ export function Footer() {
       </div>
       <div className="container mx-auto mt-8 border-t pt-6 text-center text-sm text-muted-foreground">
         <p className="font-semibold text-accent">Powered by the Department of Artificial Intelligence & Data Science, NMIT.</p>
-        <p className="mt-2">© {new Date().getFullYear()} ACM NMIT Student Chapter. All rights reserved.</p>
+        <p className="mt-2">© {new Date().getFullYear()} NMIT ACM Student Chapter. All rights reserved.</p>
       </div>
     </footer>
   );

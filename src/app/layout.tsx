@@ -3,7 +3,7 @@ import './globals.css';
 import { Toaster } from '@/components/ui/toaster';
 
 export const metadata: Metadata = {
-  title: 'ACM NMIT Onboard',
+  title: 'ACM NMIT Student Chapter – Department of Artificial Intelligence & Data Science',
   description: 'Landing Page for ACM NMIT Student Chapter Recruitment Drive',
 };
 

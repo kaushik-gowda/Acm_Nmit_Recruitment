@@ -14,15 +14,22 @@ export function Hero() {
         priority
       />
       <div className="container mx-auto px-4 md:px-6 text-center">
-        <div className="max-w-3xl mx-auto space-y-8 bg-background/80 backdrop-blur-sm p-8 rounded-xl">
+        <div className="max-w-4xl mx-auto space-y-8 bg-background/80 backdrop-blur-sm p-8 rounded-xl">
           <div className="flex items-center justify-center gap-4 text-primary">
              <Image src="/acm_logo.jpg" alt="ACM NMIT Logo" width={64} height={64} className="h-16 w-auto" />
-             <h1 className="text-3xl md:text-5xl font-bold font-headline tracking-tighter">
-                Innovate. Collaborate. Lead.
-             </h1>
+             <div className="text-center">
+                <h1 className="text-3xl md:text-5xl font-bold font-headline tracking-tighter">
+                    ACM NMIT Student Chapter
+                </h1>
+                <p className="text-xl md:text-2xl font-semibold text-accent">
+                    – Department of Artificial Intelligence &amp; Data Science
+                </p>
+             </div>
           </div>
           <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto">
             Join the ACM NMIT Student Chapter and be part of a global community of innovators, coders, and creators.
+            <br />
+            <span className="font-semibold text-foreground">Hosted under the Department of Artificial Intelligence &amp; Data Science, NMIT.</span>
           </p>
           <div className="flex justify-center">
             <Button asChild size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground text-lg px-8 py-6">

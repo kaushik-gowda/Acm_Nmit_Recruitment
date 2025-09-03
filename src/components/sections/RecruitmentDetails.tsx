@@ -9,13 +9,13 @@ const recruitmentSteps = [
     icon: UserPlus,
     title: "Who Can Join?",
     description: "Passionate students from 1st and 2nd year of any branch with a keen interest in computing and technology.",
-    details: "Open to 1st & 2nd years."
+    details: ["Open to 1st & 2nd years."]
   },
   {
     icon: Calendar,
     title: "Dates & Venue",
-    description: "Deadline: October 31, 2024",
-    details: ""
+    description: "",
+    details: ["Venue: On Campus", "Deadline: October 31, 2024"]
   }
 ];
 
@@ -35,13 +35,17 @@ export function RecruitmentDetails() {
                   <step.icon className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="font-headline text-xl">{step.title}</CardTitle>
-                <CardDescription className={`pt-2 ${index === 0 ? 'text-muted-foreground' : 'text-primary font-semibold'}`}>
-                  {step.description}
-                </CardDescription>
+                {step.description && (
+                    <CardDescription className="pt-2 text-muted-foreground">
+                        {step.description}
+                    </CardDescription>
+                )}
               </CardHeader>
               {step.details && (
                 <CardContent className="mt-auto p-0 pt-4">
-                  <p className="font-semibold text-primary">{step.details}</p>
+                  {step.details.map((detail, i) => (
+                    <p key={i} className="font-semibold text-primary">{detail}</p>
+                  ))}
                 </CardContent>
               )}
             </Card>

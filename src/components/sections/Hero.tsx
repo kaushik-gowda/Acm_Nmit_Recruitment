@@ -21,9 +21,6 @@ export function Hero() {
                 <h1 className="text-3xl md:text-5xl font-bold font-headline tracking-tighter">
                     ACM NMIT Student Chapter
                 </h1>
-                <p className="text-xl md:text-2xl font-semibold text-accent">
-                    – Department of Artificial Intelligence &amp; Data Science
-                </p>
              </div>
           </div>
           <p className="text-lg md:text-xl text-foreground/90 max-w-2xl mx-auto">

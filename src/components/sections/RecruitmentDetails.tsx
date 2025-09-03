@@ -35,7 +35,9 @@ export function RecruitmentDetails() {
                   <step.icon className="h-8 w-8 text-primary" />
                 </div>
                 <CardTitle className="font-headline text-xl">{step.title}</CardTitle>
-                <CardDescription className="pt-2 text-primary font-semibold">{step.description}</CardDescription>
+                <CardDescription className={`pt-2 ${index === 0 ? 'text-muted-foreground' : 'text-primary font-semibold'}`}>
+                  {step.description}
+                </CardDescription>
               </CardHeader>
               {step.details && (
                 <CardContent className="mt-auto p-0 pt-4">

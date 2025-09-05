@@ -14,7 +14,7 @@ const recruitmentSteps = [
   {
     icon: Calendar,
     title: "Dates & Venue",
-    details: ["Venue: On Campus", "Deadline: October 31, 2024"]
+    details: ["Venue: Room No. 271, D Block", "Dates: 12th & 13th September 2025"]
   }
 ];
 

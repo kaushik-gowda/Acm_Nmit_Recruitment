@@ -7,7 +7,7 @@ export function About() {
           <p className="text-muted-foreground text-lg leading-relaxed">
             As the official student chapter of the Association for Computing Machinery (ACM) at Nitte Meenakshi Institute of Technology, we are part of a global network of computing professionals and students. Our mission is to foster a vibrant community of innovators and problem-solvers. We provide a platform for students to develop their technical and professional skills by organizing a wide range of events, including hands-on workshops, competitive hackathons, insightful guest lectures from industry experts, and valuable networking opportunities with alumni.
           </p>
-          <p className="text-accent text-lg leading-relaxed mt-4 font-semibold">
+          <p className="text-muted-foreground text-lg leading-relaxed mt-4">
             The NMIT ACM Student Chapter functions under the Department of Artificial Intelligence & Data Science, encouraging innovation, coding culture, and research excellence.
           </p>
         </div>

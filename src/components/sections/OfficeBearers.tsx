@@ -6,31 +6,31 @@ const officeBearers = [
   {
     name: "Bhanutej Reddy",
     designation: "Chair",
-    imageUrl: "https://picsum.photos/200/200?random=1",
+    imageUrl: "https://picsum.photos/200/300?random=1",
     aiHint: "person portrait"
   },
   {
     name: "Sameer Gupta",
     designation: "Vice Chair",
-    imageUrl: "https://picsum.photos/200/200?random=2",
+    imageUrl: "https://picsum.photos/200/300?random=2",
     aiHint: "person portrait"
   },
   {
     name: "Davana Babu",
     designation: "Secretary",
-    imageUrl: "https://picsum.photos/200/200?random=3",
+    imageUrl: "https://picsum.photos/200/300?random=3",
     aiHint: "person portrait"
   },
   {
     name: "Balvivek Reddy",
     designation: "Treasurer",
-    imageUrl: "https://picsum.photos/200/200?random=4",
+    imageUrl: "https://picsum.photos/200/300?random=4",
     aiHint: "person portrait"
   },
   {
     name: "Kaushik Gowda",
     designation: "Webmaster",
-    imageUrl: "https://picsum.photos/200/200?random=5",
+    imageUrl: "https://picsum.photos/200/300?random=5",
     aiHint: "person portrait"
   },
 ];
@@ -46,9 +46,9 @@ export function OfficeBearers() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {officeBearers.map((bearer) => (
-            <Card key={bearer.name} className="text-center hover:shadow-lg transition-shadow duration-300">
+            <Card key={bearer.name} className="text-center hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
               <CardContent className="p-6 flex flex-col items-center">
-                <Avatar className="w-32 h-40 mb-4 border-4 border-primary/10 rounded-full">
+                <Avatar className="w-32 h-40 mb-4 border-4 border-primary/10 rounded-[50%/20%]">
                   <AvatarImage src={bearer.imageUrl} alt={bearer.name} data-ai-hint={bearer.aiHint} className="object-cover" />
                   <AvatarFallback>{bearer.name.charAt(0)}</AvatarFallback>
                 </Avatar>

@@ -22,7 +22,7 @@ export function LocalBenefits() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
           {predefinedBenefits.map((benefit, index) => (
-             <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
+             <Card key={index} className="text-center hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
               <CardHeader className="items-center p-6">
                 <div className="bg-primary/10 p-4 rounded-full mb-4">
                   <benefit.icon className="h-8 w-8 text-primary" />

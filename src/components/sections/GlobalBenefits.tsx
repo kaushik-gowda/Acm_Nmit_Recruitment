@@ -87,7 +87,7 @@ function BenefitsGrid({ benefits }: { benefits: typeof learningBenefits }) {
     return (
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
             {benefits.map((benefit, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300 h-full">
+            <Card key={index} className="text-center h-full hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
                 <CardHeader className="items-center p-6">
                 <div className="bg-primary/10 p-4 rounded-full mb-4">
                     <benefit.icon className="h-8 w-8 text-primary" />

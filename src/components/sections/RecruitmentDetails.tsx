@@ -14,7 +14,8 @@ const recruitmentSteps = [
   {
     icon: Calendar,
     title: "Dates & Venue",
-    details: ["Venue: Room No. 271, D Block", "Dates: 12th & 13th September 2025"]
+    description: "",
+    details: ["Venue: Room No. 271, D Block", "Deadline: 12th & 13th September 2025"]
   }
 ];
 
@@ -28,7 +29,7 @@ export function RecruitmentDetails() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
           {recruitmentSteps.map((step, index) => (
-            <Card key={index} className="flex flex-col text-center items-center hover:shadow-lg transition-shadow duration-300 p-6">
+            <Card key={index} className="flex flex-col text-center items-center hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 p-6">
               <CardHeader className="p-0">
                 <div className="mx-auto bg-primary/10 p-4 rounded-full mb-4">
                   <step.icon className="h-8 w-8 text-primary" />
@@ -52,7 +53,7 @@ export function RecruitmentDetails() {
             </Card>
           ))}
         </div>
-        <Card className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 p-8 shadow-lg">
+        <Card className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 p-8 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
           <div className="flex-1 text-center md:text-left">
             <h3 className="text-2xl font-bold font-headline text-primary mb-2">How to Apply</h3>
             <p className="text-muted-foreground mb-4">

@@ -8,11 +8,11 @@ export function Events() {
       <div
         className="absolute inset-0 -z-10 bg-fixed"
         style={{
-          backgroundImage: "url('https://picsum.photos/1920/1080?random=9')",
+          backgroundImage: "url('https://picsum.photos/1920/1080?random=15')",
           backgroundSize: 'cover',
           backgroundPosition: 'center',
         }}
-        data-ai-hint="technology event background"
+        data-ai-hint="club group photo"
       >
         <div className="absolute inset-0 bg-background/80 backdrop-blur-sm" />
       </div>

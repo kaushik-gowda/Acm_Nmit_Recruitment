@@ -4,31 +4,31 @@ import Image from "next/image";
 
 const officeBearers = [
   {
-    name: "Kaushik P",
+    name: "Bhanutej Reddy",
     designation: "Chair",
     imageUrl: "https://picsum.photos/200/200?random=1",
     aiHint: "person portrait"
   },
   {
-    name: "Jane Smith",
+    name: "Sameer Gupta",
     designation: "Vice Chair",
     imageUrl: "https://picsum.photos/200/200?random=2",
     aiHint: "person portrait"
   },
   {
-    name: "Peter Jones",
+    name: "Davana Babu",
     designation: "Secretary",
     imageUrl: "https://picsum.photos/200/200?random=3",
     aiHint: "person portrait"
   },
   {
-    name: "Priya Singh",
+    name: "Balvivek Reddy",
     designation: "Treasurer",
     imageUrl: "https://picsum.photos/200/200?random=4",
     aiHint: "person portrait"
   },
   {
-    name: "Sam Wilson",
+    name: "Kaushik Gowda",
     designation: "Webmaster",
     imageUrl: "https://picsum.photos/200/200?random=5",
     aiHint: "person portrait"
@@ -48,8 +48,8 @@ export function OfficeBearers() {
           {officeBearers.map((bearer) => (
             <Card key={bearer.name} className="text-center hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6 flex flex-col items-center">
-                <Avatar className="w-32 h-32 mb-4 border-4 border-primary/10">
-                  <AvatarImage src={bearer.imageUrl} alt={bearer.name} data-ai-hint={bearer.aiHint} />
+                <Avatar className="w-32 h-40 mb-4 border-4 border-primary/10 rounded-2xl">
+                  <AvatarImage src={bearer.imageUrl} alt={bearer.name} data-ai-hint={bearer.aiHint} className="object-cover" />
                   <AvatarFallback>{bearer.name.charAt(0)}</AvatarFallback>
                 </Avatar>
                 <h3 className="text-xl font-bold font-headline text-foreground">{bearer.name}</h3>

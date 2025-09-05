@@ -5,6 +5,7 @@ import { About } from "@/components/sections/About";
 import { LocalBenefits } from "@/components/sections/LocalBenefits";
 import { RecruitmentDetails } from "@/components/sections/RecruitmentDetails";
 import { GlobalBenefits } from "@/components/sections/GlobalBenefits";
+import { OfficeBearers } from "@/components/sections/OfficeBearers";
 import { JoinNow } from "@/components/sections/JoinNow";
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
         <GlobalBenefits />
         <LocalBenefits />
         <RecruitmentDetails />
+        <OfficeBearers />
         <JoinNow />
       </main>
       <Footer />

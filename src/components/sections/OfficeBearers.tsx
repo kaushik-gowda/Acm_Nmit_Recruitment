@@ -1,0 +1,64 @@
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent } from "@/components/ui/card";
+import Image from "next/image";
+
+const officeBearers = [
+  {
+    name: "Kaushik P",
+    designation: "Chair",
+    imageUrl: "https://picsum.photos/200/200?random=1",
+    aiHint: "person portrait"
+  },
+  {
+    name: "Jane Smith",
+    designation: "Vice Chair",
+    imageUrl: "https://picsum.photos/200/200?random=2",
+    aiHint: "person portrait"
+  },
+  {
+    name: "Peter Jones",
+    designation: "Secretary",
+    imageUrl: "https://picsum.photos/200/200?random=3",
+    aiHint: "person portrait"
+  },
+  {
+    name: "Priya Singh",
+    designation: "Treasurer",
+    imageUrl: "https://picsum.photos/200/200?random=4",
+    aiHint: "person portrait"
+  },
+  {
+    name: "Sam Wilson",
+    designation: "Webmaster",
+    imageUrl: "https://picsum.photos/200/200?random=5",
+    aiHint: "person portrait"
+  },
+];
+
+export function OfficeBearers() {
+  return (
+    <section id="office-bearers" className="py-16 md:py-24">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="max-w-3xl mx-auto text-center mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">Meet Our Office Bearers</h2>
+          <p className="text-muted-foreground mt-4 text-lg">The student leaders driving our chapter forward.</p>
+        </div>
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+          {officeBearers.map((bearer) => (
+            <Card key={bearer.name} className="text-center hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="p-6 flex flex-col items-center">
+                <Avatar className="w-32 h-32 mb-4 border-4 border-primary/10">
+                  <AvatarImage src={bearer.imageUrl} alt={bearer.name} data-ai-hint={bearer.aiHint} />
+                  <AvatarFallback>{bearer.name.charAt(0)}</AvatarFallback>
+                </Avatar>
+                <h3 className="text-xl font-bold font-headline text-foreground">{bearer.name}</h3>
+                <p className="text-primary font-semibold">{bearer.designation}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}

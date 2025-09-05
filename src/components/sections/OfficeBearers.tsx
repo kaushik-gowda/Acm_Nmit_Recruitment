@@ -46,9 +46,9 @@ export function OfficeBearers() {
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {officeBearers.map((bearer) => (
-            <Card key={bearer.name} className="text-center hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+            <Card key={bearer.name} className="bg-muted text-center hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
               <CardContent className="p-6 flex flex-col items-center">
-                <Avatar className="w-32 h-40 mb-4 border-4 border-primary/10 rounded-[50%/20%]">
+                <Avatar className="w-32 h-40 mb-4 border-4 border-primary/10 rounded-[50%/35%]">
                   <AvatarImage src={bearer.imageUrl} alt={bearer.name} data-ai-hint={bearer.aiHint} className="object-cover" />
                   <AvatarFallback>{bearer.name.charAt(0)}</AvatarFallback>
                 </Avatar>

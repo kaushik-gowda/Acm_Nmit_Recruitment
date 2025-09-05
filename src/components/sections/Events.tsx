@@ -49,6 +49,11 @@ export function Events() {
           <p className="text-muted-foreground mt-4 text-lg">
             Engage, learn, and grow with our diverse range of technical and community events.
           </p>
+          <Button asChild variant="link" className="text-accent mt-2">
+            <Link href="/events">
+              View All Events <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -69,14 +74,6 @@ export function Events() {
               </CardContent>
             </Card>
           ))}
-        </div>
-
-        <div className="text-center mt-16">
-          <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
-            <Link href="/events">
-              View All Events <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-          </Button>
         </div>
       </div>
     </section>

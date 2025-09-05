@@ -2,6 +2,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
+import { Events } from "@/components/sections/Events";
 import { LocalBenefits } from "@/components/sections/LocalBenefits";
 import { RecruitmentDetails } from "@/components/sections/RecruitmentDetails";
 import { GlobalBenefits } from "@/components/sections/GlobalBenefits";
@@ -15,6 +16,7 @@ export default function Home() {
       <main className="flex-1">
         <Hero />
         <About />
+        <Events />
         <GlobalBenefits />
         <LocalBenefits />
         <RecruitmentDetails />

@@ -48,7 +48,7 @@ export function OfficeBearers() {
           {officeBearers.map((bearer) => (
             <Card key={bearer.name} className="text-center hover:shadow-lg transition-shadow duration-300">
               <CardContent className="p-6 flex flex-col items-center">
-                <Avatar className="w-32 h-40 mb-4 border-4 border-primary/10 rounded-2xl">
+                <Avatar className="w-32 h-40 mb-4 border-4 border-primary/10 rounded-full">
                   <AvatarImage src={bearer.imageUrl} alt={bearer.name} data-ai-hint={bearer.aiHint} className="object-cover" />
                   <AvatarFallback>{bearer.name.charAt(0)}</AvatarFallback>
                 </Avatar>

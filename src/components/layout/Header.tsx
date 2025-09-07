@@ -17,8 +17,8 @@ const navLinks = [
     { href: "/#about", label: "About" },
     { href: "/#events", label: "Events" },
     { href: "/#benefits", label: "Benefits" },
-    { href: "/#recruitment", label: "Recruitment" },
     { href: "/#office-bearers", label: "Team" },
+    { href: "/#recruitment", label: "Recruitment" },
     { href: "/#contact", label: "Contact" },
 ];
 

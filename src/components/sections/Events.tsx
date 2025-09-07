@@ -16,9 +16,9 @@ export function Events() {
       />
 
       <div className="container mx-auto px-4 md:px-6">
-        <div className="max-w-3xl mx-auto text-center">
+        <div className="max-w-3xl mx-auto text-center bg-background/80 backdrop-blur-sm p-8 rounded-xl">
           <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">Past & Upcoming Events</h2>
-          <p className="text-muted-foreground mt-4 text-lg">
+          <p className="text-foreground/90 mt-4 text-lg">
             Engage, learn, and grow with our diverse range of technical and community events.
           </p>
           <Button asChild variant="link" className="text-accent mt-4 text-lg">

@@ -40,13 +40,15 @@ export function OfficeBearers() {
     <section id="office-bearers" className="py-16 md:py-24">
       <div className="container mx-auto px-4 md:px-6">
         <div className="max-w-3xl mx-auto text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">Meet Our Office Bearers</h2>
+           <div className="flex justify-center items-center gap-4 mb-4">
+              <h2 className="text-3xl md:text-4xl font-bold font-headline text-primary">Meet Our Office Bearers</h2>
+          </div>
           <p className="text-muted-foreground mt-4 text-lg">The student leaders driving our chapter forward.</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
           {officeBearers.map((bearer) => (
-            <Card key={bearer.name} className="text-center hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+            <Card key={bearer.name} className="text-center hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 border-primary border-2">
               <CardContent className="p-6 flex flex-col items-center">
                 <Avatar className="w-32 h-40 mb-4 border-4 border-primary/10 rounded-[50%/35%]">
                   <AvatarImage src={bearer.imageUrl} alt={bearer.name} data-ai-hint={bearer.aiHint} className="object-cover" />

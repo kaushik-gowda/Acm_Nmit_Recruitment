@@ -5,7 +5,7 @@ import Image from "next/image";
 
 export function Events() {
   return (
-    <section id="events" className="relative py-20 md:py-32 flex items-center justify-center">
+    <section id="events" className="relative py-16 md:py-24 flex items-center justify-center">
       <Image
         src="https://picsum.photos/1920/1080?random=1"
         alt="Club group photo"

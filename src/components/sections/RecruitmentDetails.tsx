@@ -1,15 +1,12 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Calendar, UserPlus, QrCode } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
-import Image from "next/image";
+import { Calendar, UserPlus } from "lucide-react";
 
 const recruitmentSteps = [
   {
     icon: UserPlus,
     title: "Who Can Join?",
-    description: "Passionate students from 1st and 2nd year of any branch with a keen interest in computing and technology.",
-    details: ["Open to 1st & 2nd years."]
+    description: "Passionate students from 1st, 2nd and 3rd year of any branch with a keen interest in computing and technology.",
+    details: ["Open to 1st, 2nd & 3rd years."]
   },
   {
     icon: Calendar,
@@ -53,28 +50,6 @@ export function RecruitmentDetails() {
             </Card>
           ))}
         </div>
-        <Card className="max-w-4xl mx-auto flex flex-col md:flex-row items-center gap-6 p-8 shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
-          <div className="flex-1 text-center md:text-left">
-            <h3 className="text-2xl font-bold font-headline text-primary mb-2">How to Apply</h3>
-            <p className="text-muted-foreground mb-4">
-              Click the button to fill out the registration form or scan the QR code with your phone.
-            </p>
-            <Button asChild size="lg" className="bg-accent hover:bg-accent/90">
-              <Link href="#">Register for Recruitment</Link>
-            </Button>
-          </div>
-          <div className="flex-shrink-0">
-            <div className="bg-white p-4 rounded-lg shadow-md">
-              <Image 
-                src="https://placehold.co/200x200/png?text=QR+Code" 
-                alt="Registration QR Code"
-                data-ai-hint="qr code" 
-                width={200}
-                height={200}
-              />
-            </div>
-          </div>
-        </Card>
       </div>
     </section>
   );

@@ -19,8 +19,8 @@ export default function Home() {
         <Events />
         <GlobalBenefits />
         <LocalBenefits />
-        <RecruitmentDetails />
         <OfficeBearers />
+        <RecruitmentDetails />
         <JoinNow />
       </main>
       <Footer />

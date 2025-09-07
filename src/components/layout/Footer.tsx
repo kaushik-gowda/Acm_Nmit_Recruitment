@@ -7,12 +7,20 @@ const socialLinks = [
   { name: "LinkedIn", href: "https://www.linkedin.com/company/acm-nmit/", icon: Linkedin },
 ]
 
+const quickLinks = [
+    { name: "About", href: "#about" },
+    { name: "Events", href: "#events" },
+    { name: "Benefits", href: "#benefits" },
+    { name: "Recruitment", href: "#recruitment" },
+    { name: "Team", href: "#office-bearers" },
+];
+
 export function Footer() {
   return (
     <footer id="contact" className="bg-muted py-12">
-      <div className="container mx-auto grid max-w-screen-2xl grid-cols-1 gap-12 px-4 md:grid-cols-3 md:px-6">
+      <div className="container mx-auto grid max-w-screen-2xl grid-cols-1 gap-12 px-4 md:grid-cols-4 md:px-6">
         
-        <div className="flex flex-col items-start gap-4">
+        <div className="flex flex-col items-start gap-4 md:col-span-1">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
             <Image src="/acm_logo.jpg" alt="NMIT ACM Logo" width={32} height={32} className="h-8 w-auto" />
             <span className="text-lg font-bold text-primary font-headline">NMIT ACM Student Chapter</span>
@@ -29,7 +37,18 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 md:col-span-2">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-8 md:col-span-3">
+            <div className="flex flex-col items-start gap-4">
+              <h4 className="font-bold text-foreground font-headline">Quick Links</h4>
+              <div className="space-y-2 text-sm text-muted-foreground">
+                {quickLinks.map(link => (
+                  <Link key={link.name} href={link.href} className="flex items-center gap-2 hover:text-primary" prefetch={false}>
+                    {link.name}
+                  </Link>
+                ))}
+              </div>
+            </div>
+
             <div className="flex flex-col items-start gap-4">
                 <h4 className="font-bold text-foreground font-headline">Contact Coordinators</h4>
                 <div className="space-y-2 text-sm text-muted-foreground">

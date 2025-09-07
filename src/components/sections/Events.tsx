@@ -11,7 +11,7 @@ export function Events() {
         alt="Club group photo"
         data-ai-hint="club group photo"
         fill
-        className="object-cover -z-10 brightness-75"
+        className="object-cover -z-10 brightness-100"
       />
 
       <div className="container mx-auto px-4 md:px-6">

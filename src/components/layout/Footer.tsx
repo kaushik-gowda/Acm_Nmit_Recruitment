@@ -52,7 +52,7 @@ export function Footer() {
             <div className="flex flex-col items-start gap-4">
                 <h4 className="font-bold text-foreground font-headline">Contact Coordinators</h4>
                 <div className="space-y-2 text-sm text-muted-foreground">
-                    <p className="font-semibold text-foreground">Kaushik P</p>
+                    <p className="font-semibold text-foreground">Kaushik Gowda</p>
                     <a href="mailto:kaushikgowda547@gmail.com" className="flex items-center gap-2 hover:text-primary break-all"><Mail className="w-4 h-4 shrink-0"/> kaushikgowda547@gmail.com</a>
                     <a href="tel:+917625067221" className="flex items-center gap-2 hover:text-primary"><Phone className="w-4 h-4"/> +91 7625067221</a>
                 </div>

@@ -6,31 +6,31 @@ const officeBearers = [
   {
     name: "Bhanutej Reddy",
     designation: "Chair",
-    imageUrl: "https://picsum.photos/200/300?random=1",
+    imageUrl: "",
     aiHint: "person portrait"
   },
   {
     name: "Sameer Gupta",
     designation: "Vice Chair",
-    imageUrl: "https://picsum.photos/200/300?random=2",
+    imageUrl: "",
     aiHint: "person portrait"
   },
   {
     name: "Davana Babu",
     designation: "Secretary",
-    imageUrl: "https://picsum.photos/200/300?random=3",
+    imageUrl: "",
     aiHint: "person portrait"
   },
   {
     name: "Balvivek Reddy",
     designation: "Treasurer",
-    imageUrl: "https://picsum.photos/200/300?random=4",
+    imageUrl: "",
     aiHint: "person portrait"
   },
   {
     name: "Kaushik Gowda",
     designation: "Webmaster",
-    imageUrl: "https://picsum.photos/200/300?random=5",
+    imageUrl: "",
     aiHint: "person portrait"
   },
 ];

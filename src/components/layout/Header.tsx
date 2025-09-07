@@ -23,11 +23,11 @@ export function Header() {
           <Link href="/#benefits" className="text-muted-foreground transition-colors hover:text-foreground" prefetch={false}>
             Benefits
           </Link>
-          <Link href="/#recruitment" className="text-muted-foreground transition-colors hover:text-foreground" prefetch={false}>
-            Recruitment
-          </Link>
            <Link href="/#office-bearers" className="text-muted-foreground transition-colors hover:text-foreground" prefetch={false}>
             Team
+          </Link>
+          <Link href="/#recruitment" className="text-muted-foreground transition-colors hover:text-foreground" prefetch={false}>
+            Recruitment
           </Link>
           <Link href="/#contact" className="text-muted-foreground transition-colors hover:text-foreground" prefetch={false}>
             Contact

@@ -58,7 +58,7 @@ export function Hero() {
           <div className="flex items-center justify-center gap-4 text-primary">
              <Image src="/nmit_acm.jpg" alt="NMIT ACM Logo" width={64} height={64} className="h-16 w-auto" />
              <div className="text-center">
-                <h1 className="text-3xl md:text-5xl font-bold font-headline tracking-tighter">
+                <h1 className="text-3xl md:text-5xl font-bold font-headline tracking-tighter text-primary">
                     NMIT ACM Student Chapter
                 </h1>
              </div>

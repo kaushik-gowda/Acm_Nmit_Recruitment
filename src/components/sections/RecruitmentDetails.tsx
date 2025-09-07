@@ -26,7 +26,7 @@ export function RecruitmentDetails() {
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12 max-w-4xl mx-auto">
           {recruitmentSteps.map((step, index) => (
-            <Card key={index} className="flex flex-col text-center items-center hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 p-6">
+            <Card key={index} className="flex flex-col text-center items-center hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 p-6 border-primary border-2">
               <CardHeader className="p-0">
                 <div className="mx-auto bg-primary/10 p-4 rounded-full mb-4">
                   <step.icon className="h-8 w-8 text-primary" />

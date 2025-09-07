@@ -72,7 +72,7 @@ export default function EventsPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     {allEvents.map((event) => (
-                        <Card key={event.title} className="overflow-hidden hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2">
+                        <Card key={event.title} className="overflow-hidden hover:shadow-xl transition-all duration-300 ease-in-out transform hover:-translate-y-2 border-primary border-2">
                              <Image
                                 src={event.imageUrl}
                                 alt={event.title}

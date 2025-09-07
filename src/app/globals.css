@@ -4,48 +4,48 @@
 
 @layer base {
   :root {
-    --background: 240 10% 3.9%; /* Near black */
+    --background: 0 0% 0%; /* Black */
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
+    --card: 0 0% 4%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
+    --popover: 0 0% 4%;
     --popover-foreground: 0 0% 98%;
-    --primary: 207 100% 30.2%; /* ACM Blue */
+    --primary: 218 100% 56%; /* New Blue */
     --primary-foreground: 0 0% 98%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 207 90% 50%;
+    --accent: 218 100% 66%; /* Lighter New Blue */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 207 90% 50%;
+    --ring: 218 100% 56%;
     --radius: 0.5rem;
   }
 
   .dark {
-    --background: 240 10% 3.9%; /* Near black */
+    --background: 0 0% 0%; /* Black */
     --foreground: 0 0% 98%;
-    --card: 240 10% 3.9%;
+    --card: 0 0% 4%;
     --card-foreground: 0 0% 98%;
-    --popover: 240 10% 3.9%;
+    --popover: 0 0% 4%;
     --popover-foreground: 0 0% 98%;
-    --primary: 207 100% 30.2%; /* ACM Blue */
+    --primary: 218 100% 56%; /* New Blue */
     --primary-foreground: 0 0% 98%;
     --secondary: 240 3.7% 15.9%;
     --secondary-foreground: 0 0% 98%;
     --muted: 240 3.7% 15.9%;
     --muted-foreground: 240 5% 64.9%;
-    --accent: 207 90% 50%;
+    --accent: 218 100% 66%; /* Lighter New Blue */
     --accent-foreground: 0 0% 98%;
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
     --border: 240 3.7% 15.9%;
     --input: 240 3.7% 15.9%;
-    --ring: 207 90% 50%;
+    --ring: 218 100% 56%;
   }
 }
 
@@ -55,5 +55,17 @@
   }
   body {
     @apply bg-background text-foreground;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) translateX(0);
+    }
+    50% {
+      transform: translateY(-20px) translateX(15px);
+    }
+    100% {
+      transform: translateY(0) translateX(0);
+    }
   }
 }

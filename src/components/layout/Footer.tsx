@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 
 const socialLinks = [
-  { name: "Instagram", href: "#", icon: Instagram },
-  { name: "LinkedIn", href: "#", icon: Linkedin },
+  { name: "Instagram", href: "https://www.instagram.com/acm_nmit?igsh=ZGJpMGRjamc4cG5w", icon: Instagram },
+  { name: "LinkedIn", href: "https://www.linkedin.com/company/acm-nmit/", icon: Linkedin },
 ]
 
 export function Footer() {

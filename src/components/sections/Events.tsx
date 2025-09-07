@@ -21,7 +21,7 @@ export function Events() {
             Engage, learn, and grow with our diverse range of technical and community events.
           </p>
           <Button asChild variant="link" className="text-accent mt-4 text-lg">
-            <Link href="/events">
+            <Link href="/"> 
               View All Events <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>

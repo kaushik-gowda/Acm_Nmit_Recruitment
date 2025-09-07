@@ -6,31 +6,31 @@ const officeBearers = [
   {
     name: "Bhanutej Reddy",
     designation: "Chair",
-    imageUrl: "",
+    imageUrl: "/members/bhanutej.jpg",
     aiHint: "person portrait"
   },
   {
     name: "Sameer Gupta",
     designation: "Vice Chair",
-    imageUrl: "",
+    imageUrl: "/members/sameer.jpg",
     aiHint: "person portrait"
   },
   {
     name: "Davana Babu",
     designation: "Secretary",
-    imageUrl: "",
+    imageUrl: "/members/davana.jpg",
     aiHint: "person portrait"
   },
   {
     name: "Balvivek Reddy",
     designation: "Treasurer",
-    imageUrl: "",
+    imageUrl: "/members/balvivek.jpg",
     aiHint: "person portrait"
   },
   {
     name: "Kaushik Gowda",
     designation: "Webmaster",
-    imageUrl: "",
+    imageUrl: "/members/kaushik.jpg",
     aiHint: "person portrait"
   },
 ];

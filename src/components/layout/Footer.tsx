@@ -11,8 +11,8 @@ const quickLinks = [
     { name: "About", href: "#about" },
     { name: "Events", href: "/events" },
     { name: "Benefits", href: "#benefits" },
-    { name: "Recruitment", href: "#recruitment" },
     { name: "Team", href: "#office-bearers" },
+    { name: "Recruitment", href: "#recruitment" },
 ];
 
 export function Footer() {

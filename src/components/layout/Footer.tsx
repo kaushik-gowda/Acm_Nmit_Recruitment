@@ -22,7 +22,7 @@ export function Footer() {
         
         <div className="flex flex-col items-start gap-4 md:col-span-1">
           <Link href="#" className="flex items-center gap-2" prefetch={false}>
-            <Image src="/acm_logo.jpg" alt="NMIT ACM Logo" width={32} height={32} className="h-8 w-auto" />
+            <Image src="/nmit_acm.jpg" alt="NMIT ACM Logo" width={32} height={32} className="h-8 w-auto" />
             <span className="text-lg font-bold text-primary font-headline">NMIT ACM Student Chapter</span>
           </Link>
           <p className="text-sm text-muted-foreground">

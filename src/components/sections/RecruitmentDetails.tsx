@@ -12,7 +12,7 @@ const recruitmentSteps = [
     icon: Calendar,
     title: "Dates & Venue",
     description: "",
-    details: ["Venue: Room No. 271, D Block", "Deadline: 12th & 13th September 2025"]
+    details: ["Venue: DR. APJ ABDUL KALAM SEMINAR HALL, B Block", "Deadline: 13th September 2025"]
   }
 ];
 
